@@ -27,3 +27,41 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+.flex-container { 
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 35px;
+  justify-content: center;
+  gap: 14px;
+}
+.flex-item {
+  width: 153px;
+  height: 220px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #FAF4EF;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.flex-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.flex-item h3 {
+  margin: 8px 12px 4px 12px;
+  font-size: 14px;
+  color: var(--dark-coffee);
+}
+
+.flex-item p {
+  margin: 0 12px 12px 12px;
+  font-size: 12px;
+  color: var(--persian-green);
+  font-weight: bold;
+}
