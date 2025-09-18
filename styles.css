@@ -1,3 +1,14 @@
+:root {
+    /* Dark colors */
+    --dark-coffee: #1A120B;
+    --persian-green: #0B413B;
+
+    /* Light colors */
+    --warm-white: #F9F1EB;
+    --vanilla-cream: #FAF4EF;
+    --color-sandy-brown: #E5B28A;
+}
+
 body {
     background-color: #F9F1EB;
     margin: 0 auto;
