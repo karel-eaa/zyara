@@ -55,13 +55,17 @@ body {
 
 .flex-item h3 {
   margin: 8px 12px 4px 12px;
-  font-size: 14px;
   color: var(--dark-coffee);
+  color: #1A120B;
+  font-family: Bentham;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .flex-item p {
   margin: 0 12px 12px 12px;
-  font-size: 12px;
+  font-size: 18px;
+  font-weight: 400;
   color: var(--persian-green);
   font-weight: bold;
 }
