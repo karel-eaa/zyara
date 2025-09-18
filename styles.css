@@ -10,6 +10,6 @@
 }
 
 body {
-    background-color: #F9F1EB;
+    background-color: var(--warm-white);
     margin: 0 auto;
 }
