@@ -12,6 +12,7 @@
 body {
     background-color: var(--warm-white);
     margin: 0 auto;
+    padding: 32px 0;
 }
 
 /* Font Lugrasimo */
@@ -77,4 +78,72 @@ body {
 }
 .navbar .menu-items {
   display: flex;
+}
+.delivery-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 35px;
+    margin-bottom: 35px;
+}
+
+.delivery-item {
+    background-color: var(--persian-green);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    width: 320px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.delivery-item::before {
+    content: '';
+    position: absolute;
+    right: -115px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 258px;
+    height: 258px;
+    background-image: url('images/fetta-rolls.png');
+    background-size: 60%;
+    background-position: left;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.delivery-item h3,
+.delivery-item p,
+.delivery-item button {
+    position: relative;
+    z-index: 2;
+}
+
+.delivery-item h3 {
+    color: var(--warm-white);
+    font-family: 'Lugrasimo';
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.delivery-item p {
+    color: var(--warm-white);
+    font-size: 20px;
+    font-family: 'Bentham';
+    width: 236px;
+    height: 52px;
+}
+
+.delivery-item button {
+  border-radius: 34px;
+  background: #FAF4EF;
+  font-family: 'Bentham';
+  font-size: 20px;
+  width: 130px;
+  height: 43px;
+  flex-shrink: 0;
+  color: var(--dark-coffee);
+  cursor: pointer;
+  border: none;
 }
