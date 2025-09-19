@@ -33,22 +33,22 @@
         </section>
         <section class="menu">
             <div class="flex-container">
-                <div class="flex-item">
+                <div class="flex-item" onclick="openModal('ezma')">
                     <img src="images/product1.png" alt="Image 1">
                     <h3 class="lugrasimo-regular">The Famous Ezma</h3>
                     <p class="bentham-regular">85 dkk</p>
                 </div>
-                <div class="flex-item">
+                <div class="flex-item" onclick="openModal('lentil')">
                     <img src="images/product2.png" alt="Image 2">
                     <h3 class="lugrasimo-regular">Our Lentil Soup</h3>
                     <p class="bentham-regular">85 dkk</p>
                 </div>
-                <div class="flex-item">
+                <div class="flex-item" onclick="openModal('lamb')">
                     <img src="images/product3.png" alt="Image 3">
                     <h3 class="lugrasimo-regular">Grilled Lamb Roll</h3>
                     <p class="bentham-regular">85 dkk</p>
                 </div>
-                <div class="flex-item">
+                <div class="flex-item" onclick="openModal('feta')">
                     <img src="images/product4.png" alt="Image 4">
                     <h3 class="lugrasimo-regular">Fried Feta Rolls</h3>
                     <p class="bentham-regular">85 dkk</p>
@@ -117,5 +117,23 @@
     </footer>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/fcdc3cd816.js" crossorigin="anonymous"></script>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <div class="modal-content">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <span class="modal-allergens" id="modalAllergens"></span>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-price" id="modalPrice"></div>
+                <button class="modal-add-btn">Add to order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
