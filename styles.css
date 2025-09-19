@@ -15,8 +15,8 @@
 /* ===== GLOBAL STYLES ===== */
 body {
     background-color: var(--warm-white);
-    margin: 0 auto;
-    padding: 32px 0;
+    margin: 0;
+    padding: 32px 0 0 0;
 }
 
 /* ===== FONT CLASSES ===== */
@@ -418,9 +418,8 @@ body {
 /* Main footer container for home page */
 .home-footer {
   background: var(--linear-green);
-  padding: 40px 32px;
-  margin-top: 40px;
-  padding-bottom: 0;
+  padding: 40px 32px 0 32px;
+  margin: 40px 0 0 0;
   filter: drop-shadow(19px 17px 19px rgba(0, 0, 0, 0.25)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 15px 15px 0 0;
 }
@@ -440,6 +439,11 @@ body {
 /* Footer sections */
 .footer-section {
   margin: 20px 0;
+}
+
+.footer-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 40px;
 }
 
 .footer-section h4 {
