@@ -51,7 +51,7 @@ body {
   height: 220px;
   flex-shrink: 0;
   border-radius: 15px;
-  background: #FAF4EF;
+  background: var(--vanilla-cream);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -68,7 +68,6 @@ body {
 .flex-item h3 {
   margin: 8px 12px 4px 12px;
   color: var(--dark-coffee);
-  color: #1A120B;
   font-family: Bentham;
   font-size: 20px;
   font-weight: 400;
@@ -139,7 +138,7 @@ body {
 
 .delivery-item button {
   border-radius: 34px;
-  background: #FAF4EF;
+  background: var(--vanilla-cream);
   font-family: 'Bentham';
   font-size: 20px;
   width: 130px;
@@ -148,4 +147,49 @@ body {
   color: var(--dark-coffee);
   cursor: pointer;
   border: none;
+}
+.location-flexbox {
+  display: flex;
+  width: 320px;
+  height: 408px;
+  fill: var(--persian-green);
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  justify-content: center;
+  text-align: center;
+  padding: 20px 32px;
+}
+.location-item {
+  background-color: var(--persian-green);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+  width: 320px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.location-item img {
+  width: 171px;
+  height: 202.261px;
+}
+.location-item h3 {
+  width: 246px;
+  height: 60px;
+  color: var(--warm-white);
+  font-family: 'Lugrasimo';
+  font-size: 24px;
+}
+.location-item p {
+  width: 246px;
+  height: 52px;
+  color: var(--warm-white);
+  font-family: 'Bentham';
+  font-size: 20px;
+}
+.location-item button {
+  width: 130px;
+  height: 43px;
+  border-radius: 34px;
+  background: var(--vanilla-cream);
+  color: #000;
+  font-family: 'Bentham';
+  font-size: 20px;
 }
