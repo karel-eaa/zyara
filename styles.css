@@ -66,6 +66,7 @@ body {
   margin: 0 12px 12px 12px;
   font-size: 18px;
   font-weight: 400;
-  color: var(--persian-green);
+  color: var(--dark-coffee);
   font-weight: bold;
+  opacity: 90%;
 }
