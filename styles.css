@@ -66,7 +66,15 @@ body {
   margin: 0 12px 12px 12px;
   font-size: 18px;
   font-weight: 400;
-  color: var(--dark-coffee);
+  color: var(--persian-green);
   font-weight: bold;
-  opacity: 90%;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+.navbar .menu-items {
+  display: flex;
 }
