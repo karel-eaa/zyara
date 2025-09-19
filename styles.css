@@ -1,3 +1,4 @@
+/* ===== CSS VARIABLES ===== */
 :root {
     /* Dark colors */
     --dark-coffee: #1A120B;
@@ -9,12 +10,14 @@
     --color-sandy-brown: #E5B28A;
 }
 
+/* ===== GLOBAL STYLES ===== */
 body {
     background-color: var(--warm-white);
     margin: 0 auto;
     padding: 32px 0;
 }
 
+/* ===== FONT CLASSES ===== */
 /* Font Lugrasimo */
 .lugrasimo-regular {
   font-family: "Lugrasimo", cursive;
@@ -28,7 +31,9 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-/*nav bar*/
+
+/* ===== NAVIGATION STYLES ===== */
+/* Main navigation container */
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -38,14 +43,16 @@ body {
   background-color: var(--warm-white);
 }
 
+/* Navigation content wrapper */
 .nav-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   flex: 1;
 }
 
+/* Navigation title */
 .nav-content h1 {
   margin: 0;
   color: var(--dark-coffee);
@@ -54,6 +61,7 @@ body {
   text-align: center;
 }
 
+/* Background logo */
 .nav-logo {
   width: 268px;
   height: 193px;
@@ -63,15 +71,41 @@ body {
   z-index: 1;
 }
 
+/* Shopping cart icon */
 .fa-cart-shopping {
   color: var(--dark-coffee);
   font-size: 24px;
   cursor: pointer;
 }
 
-.navbar .menu-items {
-  display: flex;
+/* Back arrow button */
+.fa-arrow-left {
+  width: 62px !important;
+  height: 62px !important;
+  flex-shrink: 0;
+  border-radius: 15px !important;
+  background: #FFF !important;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--dark-coffee) !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  font-size: 18px !important;
 }
+
+/* Basket navigation specific styles */
+.basket-nav {
+  justify-content: space-between;
+  align-content: center;
+  height: 70px;
+}
+
+/* ===== MAIN MENU GRID ===== */
+/* Menu items container */
 .flex-container { 
   display: flex;
   flex-wrap: wrap;
@@ -79,6 +113,8 @@ body {
   justify-content: center;
   gap: 14px;
 }
+
+/* Individual menu item card */
 .flex-item {
   width: 153px;
   height: 220px;
@@ -91,6 +127,7 @@ body {
   overflow: hidden;
 }
 
+/* Menu item image */
 .flex-item img {
   width: 100%;
   height: 120px;
@@ -98,6 +135,7 @@ body {
   border-radius: 15px 15px 0 0;
 }
 
+/* Menu item title */
 .flex-item h3 {
   margin: 8px 12px 4px 12px;
   color: var(--dark-coffee);
@@ -106,6 +144,7 @@ body {
   font-weight: 400;
 }
 
+/* Menu item price */
 .flex-item p {
   margin: 0 12px 12px 12px;
   font-size: 18px;
@@ -113,6 +152,9 @@ body {
   color: var(--persian-green);
   font-weight: bold;
 }
+
+/* ===== DELIVERY PROMOTION SECTION ===== */
+/* Delivery banner container */
 .delivery-container {
     display: flex;
     justify-content: center;
@@ -120,6 +162,7 @@ body {
     margin-bottom: 35px;
 }
 
+/* Delivery promotion card */
 .delivery-item {
     background-color: var(--persian-green);
     border-radius: 15px;
@@ -132,6 +175,7 @@ body {
     z-index: 1;
 }
 
+/* Background image for delivery card */
 .delivery-item::before {
     content: '';
     position: absolute;
@@ -148,6 +192,7 @@ body {
     z-index: 1;
 }
 
+/* Ensure content appears above background */
 .delivery-item h3,
 .delivery-item p,
 .delivery-item button {
@@ -155,6 +200,7 @@ body {
     z-index: 2;
 }
 
+/* Delivery card title */
 .delivery-item h3 {
     color: var(--warm-white);
     font-family: 'Lugrasimo';
@@ -162,6 +208,7 @@ body {
     font-size: 24px;
 }
 
+/* Delivery card description */
 .delivery-item p {
     color: var(--warm-white);
     font-size: 20px;
@@ -170,6 +217,7 @@ body {
     height: 52px;
 }
 
+/* Delivery card button */
 .delivery-item button {
   border-radius: 34px;
   background: var(--vanilla-cream);
@@ -182,6 +230,9 @@ body {
   cursor: pointer;
   border: none;
 }
+
+/* ===== LOCATION SECTION ===== */
+/* Location section container */
 .location-flexbox {
   display: flex;
   width: 320px;
@@ -192,6 +243,8 @@ body {
   text-align: center;
   padding: 20px 32px;
 }
+
+/* Location card */
 .location-item {
   background-color: var(--persian-green);
   border-radius: 15px;
@@ -200,10 +253,14 @@ body {
   width: 320px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
+
+/* Location map image */
 .location-item img {
   width: 171px;
   height: 202.261px;
 }
+
+/* Location title */
 .location-item h3 {
   width: 246px;
   height: 60px;
@@ -211,6 +268,8 @@ body {
   font-family: 'Lugrasimo';
   font-size: 24px;
 }
+
+/* Location address */
 .location-item p {
   width: 246px;
   height: 52px;
@@ -218,6 +277,8 @@ body {
   font-family: 'Bentham';
   font-size: 20px;
 }
+
+/* Location button */
 .location-item button {
   width: 130px;
   height: 43px;
@@ -227,12 +288,142 @@ body {
   font-family: 'Bentham';
   font-size: 20px;
 }
-.fa-arrow-left {
-  background-color: var(--warm-white);
-  width: 62px;
-  height: 62px;
-  align-content: center;
+
+/* ===== BASKET PAGE STYLES ===== */
+/* Basket items container */
+.single-row-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 26px;
+  gap: 14px;
+}
+
+/* Individual basket item */
+.single-row-item {
+  width: 342px;
+  height: 120px;
+  flex-shrink: 0;
   border-radius: 15px;
   background: #FFF;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 13px;
+  gap: 19px;
+  box-sizing: border-box;
+}
+
+/* Basket item image */
+.single-row-item img {
+  width: 106px;
+  height: 86px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Basket item details column */
+.single-column {
+  flex-direction: column;
+  width: 205px;
+}
+
+/* Basket item title */
+.single-column h3 {
+  margin-bottom: 0;
+}
+
+/* Basket item price */
+.single-column p {
+  margin: 0;
+}
+
+/* ===== QUANTITY SELECTOR ===== */
+/* Quantity controls container */
+.quantity-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
+}
+
+/* Quantity selector button */
+.selector-button { 
+  background-color: var(--persian-green);
+  border-radius: 15px;
+  color: var(--warm-white);
+  padding: 13px;
+  width: 107px;
+  text-align: center; 
+}
+
+/* Spacing for quantity selector icons */
+.selector-button i,
+.selector-button span {
+  padding-left: 10px;
+}
+
+/* ===== BASKET FOOTER ===== */
+/* Fixed footer container */
+.basket-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 32px 40px;
+  border-top: 1px dashed var(--dark-coffee);
+}
+
+/* Total price section */
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: 'Bentham';
+  font-size: 20px;
+  color: var(--dark-coffee);
+}
+
+/* Total label text */
+.total-label {
+  font-weight: 400;
+}
+
+/* Total price text */
+.total-price {
+  font-weight: bold;
+}
+
+/* Checkout button */
+.checkout-btn {
+  width: 100%;
+  height: 50px;
+  background: var(--persian-green);
+  color: var(--warm-white);
+  border: none;
+  border-radius: 15px;
+  font-family: 'Bentham';
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ===== UTILITY CLASSES ===== */
+/* Smaller font size for specific elements */
+.kid {
+  font-size: 20px;
+}
+
+/* Prevent overlap with fixed footer */
+main {
+  padding-bottom: 150px;
+}
+
+/* Unused navbar class */
+.navbar .menu-items {
+  display: flex;
 }
