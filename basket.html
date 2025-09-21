@@ -17,70 +17,30 @@
         <nav class="nav-container">
             <div class="nav-content basket-nav">
                 <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
-                <h1 class="menu-items lugrasimo-regular kid">Zyara Restaurant</h1>
+                <div class="title-wrapper">
+                    <h1 class="menu-items lugrasimo-regular kid">Zyara Restaurant</h1>
+                </div>
+                <div style="width: 62px;"></div>
             </div>
         </nav>
     </header>
     <main>
         <div class="single-row-container">
-            <div class="single-row-item">
-                <img src="images/product1.png" alt="product1">
-                <div class="single-column">
-                    <h3>The Famous Ezma</h3>
-                    <p>85 dkk</p> 
-                    <div class="quantity-selector">
-                        <i class="fa-solid fa-trash"></i>
-                        <div class="selector-button">
-                            <i class="fa-solid fa-minus"></i>
-                            <span class="quantity-display">1</span>
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single-row-item">
-                <img src="images/product2.png" alt="product2">
-                <div class="single-column">
-                    <h3>The Famous Ezma</h3>
-                    <p>85 dkk</p> 
-                    <div class="quantity-selector">
-                        <i class="fa-solid fa-trash"></i>
-                        <div class="selector-button">
-                            <i class="fa-solid fa-minus"></i>
-                            <span class="quantity-display">1</span>
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single-row-item">
-                <img src="images/product3.png" alt="product3">
-                <div class="single-column">
-                    <h3>The Famous Ezma</h3>
-                    <p>85 dkk</p> 
-                    <div class="quantity-selector">
-                        <i class="fa-solid fa-trash"></i>
-                        <div class="selector-button">
-                            <i class="fa-solid fa-minus"></i>
-                            <span class="quantity-display">1</span>
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Cart items will be dynamically loaded here -->
         </div>
     </main>
-    <footer>
-        <div class="basket-footer">
-            <div class="total-section">
-                <span class="total-label">Total</span>
-                <span class="total-price">255 dkk</span>
-            </div>
-            <button class="checkout-btn">
-                Checkout
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
+    <div class="basket-footer">
+        <div class="total-section">
+            <span class="total-label">Total</span>
+            <span class="total-price">0 dkk</span>
         </div>
-    </footer>
+        <button class="checkout-btn">
+            Checkout
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+    
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
