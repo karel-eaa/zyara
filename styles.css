@@ -227,3 +227,78 @@ body {
   font-family: 'Bentham';
   font-size: 20px;
 }
+
+/* Filter/category section */
+.filter {
+  margin-top: 27px;
+  margin-bottom: 13px;
+  width: 320px;
+  height: 49px;
+  width: 100%;
+  background-color: none;
+  display: flex;
+  align-items: center;
+  background-color: none;
+}
+
+.category-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 13px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.category-selector > p {
+  color: var(--dark-coffee);
+  text-align: center;
+  font-family: Bentham;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.category-selector > p:first-of-type {
+  margin-left: 72px;
+}
+
+.category-selector > p:last-of-type {
+  margin-right: 35px;
+}
+
+.filter-button {
+  position: absolute;
+  width: 66px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 0 25px 25px 0;
+  background: var(--vanilla-cream);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 17px;
+}
+
+.filter-icon {
+    /* Hide the original image */
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    
+    /* Apply your custom color using mask */
+    background-color: var(--persian-green);
+    mask: url('images/filter-regular-full.svg') no-repeat center / contain;
+    -webkit-mask: url('images/filter-regular-full.svg') no-repeat center / contain;
+  }
+
+  .focus-icon {
+    position: relative;
+    width: 17px;
+    height: 17px;
+  }
