@@ -46,22 +46,22 @@
          </section>
         <section class="menu">
             <div class="flex-container">
-                <div class="flex-item menu-item category-soup">
+                <div class="flex-item menu-item category-soup" onclick="openModal('ezma')">
                     <img src="images/product1.png" alt="Image 1">
                     <h3 class="lugrasimo-regular">The Famous Ezma</h3>
                     <p class="bentham-regular">85 dkk</p>
                 </div>
-                <div class="flex-item menu-item category-soup">
+                <div class="flex-item menu-item category-soup" onclick="openModal('lentil')">
                     <img src="images/product2.png" alt="Image 2">
                     <h3 class="lugrasimo-regular">Our Lentil Soup</h3>
                     <p class="bentham-regular">85 dkk</p>
                 </div>
-                <div class="flex-item menu-item category-rolls">
+                <div class="flex-item menu-item category-rolls" onclick="openModal('lamb')">
                     <img src="images/product3.png" alt="Image 3">
                     <h3 class="lugrasimo-regular">Grilled Lamb Roll</h3>
                     <p class="bentham-regular">85 dkk</p>
                 </div>
-                <div class="flex-item menu-item category-rolls">
+                <div class="flex-item menu-item category-rolls" onclick="openModal('feta')">
                     <img src="images/product4.png" alt="Image 4">
                     <h3 class="lugrasimo-regular">Fried Feta Rolls</h3>
                     <p class="bentham-regular">85 dkk</p>
@@ -89,11 +89,76 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="home-footer">
+        <section class="contact">
+            <h3>Contact us</h3>
+            
+            <div class="footer-section">
+                <h4>Opening Hours</h4>
+                <div class="opening-hours">
+                    <div class="hours-row">
+                        <span>Mon-Fri:&nbsp;</span>
+                        <span>11:00-21:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Sat:&nbsp;</span>
+                        <span>10:00-21:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-section">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@zyara.dk</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+45 44 11 46 00</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Inger Christensens Gade 98, 8220 Brabrand</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </section>
     </footer>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/fcdc3cd816.js" crossorigin="anonymous"></script>
     <!-- Custom Script -->
      <script src="main.js"></script>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <div class="modal-content">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <span class="modal-allergens" id="modalAllergens"></span>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-price" id="modalPrice"></div>
+                <button class="modal-add-btn">Add to order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
