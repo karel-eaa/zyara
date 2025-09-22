@@ -22,7 +22,9 @@ const focusIcons = [
     document.getElementById('focus-7'),
     document.getElementById('focus-8'),
     document.getElementById('focus-9'),
-    document.getElementById('focus-10')
+    document.getElementById('focus-10'),
+    document.getElementById('focus-11'),
+    document.getElementById('focus-12')
 ]
 
 // Get category buttons using id property
@@ -37,7 +39,9 @@ const categoryButtons = [
     document.getElementById('category-7'),
     document.getElementById('category-8'),
     document.getElementById('category-9'),
-    document.getElementById('category-10')
+    document.getElementById('category-10'),
+    document.getElementById('category-11'),
+    document.getElementById('category-12'),
 ]
 
 // Set every focus icon to display none except the first one
