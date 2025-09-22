@@ -97,42 +97,13 @@ body {
   top: 0;
   z-index: 10;
   font-size: 18px !important;
-  text-decoration: none !important;
-}
-
-/* Remove underline from arrow link */
-a .fa-arrow-left {
-  text-decoration: none !important;
-}
-
-a:has(.fa-arrow-left) {
-  text-decoration: none !important;
 }
 
 /* Basket navigation specific styles */
 .basket-nav {
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
   height: 70px;
-  display: flex;
-  width: 100%;
-  position: relative;
-}
-
-.basket-nav h1 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  z-index: 1;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.basket-nav .fa-arrow-left {
-  position: relative !important;
-  left: auto !important;
-  top: auto !important;
 }
 
 /* ===== MAIN MENU GRID ===== */
@@ -327,14 +298,12 @@ a:has(.fa-arrow-left) {
   flex-direction: column;
   margin: 0 26px;
   gap: 14px;
-  padding-bottom: 200px;
 }
 
 /* Individual basket item */
 .single-row-item {
-  width: 100%;
-  max-width: 342px;
-  min-height: 120px;
+  width: 342px;
+  height: 120px;
   flex-shrink: 0;
   border-radius: 15px;
   background: #FFF;
@@ -342,100 +311,59 @@ a:has(.fa-arrow-left) {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 15px;
-  gap: 15px;
+  padding: 0 13px;
+  gap: 19px;
   box-sizing: border-box;
-  position: relative;
 }
 
 /* Basket item image */
 .single-row-item img {
-  width: 80px;
-  height: 80px;
+  width: 106px;
+  height: 86px;
   border-radius: 15px;
   object-fit: cover;
-  flex-shrink: 0;
 }
 
 /* Basket item details column */
 .single-column {
-  display: flex;
   flex-direction: column;
-  flex: 1;
-  min-width: 0;
+  width: 205px;
 }
 
 /* Basket item title */
 .single-column h3 {
-  margin: 0 0 5px 0;
-  font-size: 16px;
-  color: var(--dark-coffee);
-  font-family: 'Lugrasimo';
-  line-height: 1.2;
+  margin-bottom: 0;
 }
 
 /* Basket item price */
 .single-column p {
   margin: 0;
-  font-size: 14px;
-  color: var(--persian-green);
-  font-family: 'Bentham';
-  font-weight: bold;
-}
-
-/* Trash icon container */
-.trash-container {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  padding: 5px;
-}
-
-.trash-container .fa-trash {
-  color: var(--dark-coffee);
-  font-size: 16px;
 }
 
 /* ===== QUANTITY SELECTOR ===== */
-/* Quantity buttons */
-.quantity-btn {
-  background: none;
-  border: none;
-  color: var(--warm-white);
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-/* Quantity display */
-.quantity-display {
-  color: var(--warm-white);
-  font-size: 16px;
-  font-weight: bold;
-  min-width: 20px;
-  text-align: center;
-  margin: 0 8px;
-}
-
 /* Quantity controls container */
 .quantity-selector {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background: var(--persian-green);
-  border-radius: 20px;
-  padding: 8px 12px;
-  margin-top: 10px;
-  min-width: 100px;
-  align-self: flex-start;
+  margin-bottom: 17px;
+}
+
+/* Quantity selector button */
+.selector-button { 
+  background-color: var(--persian-green);
+  border-radius: 15px;
+  color: var(--warm-white);
+  padding: 13px;
+  width: 107px;
+  text-align: center; 
+}
+
+/* Spacing for quantity selector icons */
+.selector-button i,
+.selector-button span {
+  padding-left: 10px;
 }
 
 /* ===== BASKET FOOTER ===== */
@@ -447,8 +375,6 @@ a:has(.fa-arrow-left) {
   right: 0;
   padding: 20px 32px 40px;
   border-top: 1px dashed var(--dark-coffee);
-  background: var(--warm-white);
-  z-index: 100;
 }
 
 /* Total price section */
@@ -637,6 +563,7 @@ a:has(.fa-arrow-left) {
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 /* Modal product image */
@@ -696,11 +623,16 @@ a:has(.fa-arrow-left) {
   font-family: 'Bentham';
   font-size: 20px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
-
 /* Make flex items clickable */
 .flex-item {
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.flex-item:hover {
+  transform: translateY(-2px);
 }
 
 /* ===== UTILITY CLASSES ===== */
