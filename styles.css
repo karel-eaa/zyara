@@ -655,10 +655,9 @@ body {
   width: 320px;
   height: 49px;
   width: 100%;
-  background-color: none;
+  background-color: transparent;
   display: flex;
   align-items: center;
-  background-color: none;
 }
 
 .category-selector {
@@ -714,8 +713,14 @@ body {
     
     /* Apply your custom color using mask */
     background-color: var(--persian-green);
-    mask: url('images/filter-regular-full.svg') no-repeat center / contain;
-    -webkit-mask: url('images/filter-regular-full.svg') no-repeat center / contain;
+    mask-image: url('images/filter-regular-full.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    -webkit-mask-image: url('images/filter-regular-full.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
   }
 
   .focus-icon {
