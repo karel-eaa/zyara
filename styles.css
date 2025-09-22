@@ -71,6 +71,7 @@ body {
   aspect-ratio: 268/193;
   position: absolute;
   z-index: 1;
+  margin-top: -55px;
 }
 
 /* Shopping cart icon */
@@ -151,7 +152,8 @@ body {
   margin: 0 12px 12px 12px;
   font-size: 18px;
   font-weight: 400;
-  color: var(--persian-green);
+  color: var(--dark-coffee);
+  opacity: 90%;
   font-weight: bold;
 }
 
