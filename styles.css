@@ -668,6 +668,7 @@ body {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    margin-left: 72px;
 }
 
 .category-selector > p {
@@ -681,7 +682,7 @@ body {
 }
 
 .category-selector > p:first-of-type {
-  margin-left: 72px;
+  
 }
 
 .category-selector > p:last-of-type {
