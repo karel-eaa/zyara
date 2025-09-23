@@ -30,6 +30,22 @@ const products = {
         calories: '380 kcal',
         description: 'Crispy golden rolls filled with creamy feta cheese and herbs. Served hot with our special dipping sauce for an irresistible taste experience.',
         price: '85 dkk'
+    },
+    wara: {
+        title: 'Wara Enab Menu',
+        image: 'images/product5.png',
+        allergens: 'allergens: 1, 6',
+        calories: '420 kcal',
+        description: 'Traditional stuffed grape leaves filled with rice, herbs, and spices. A Mediterranean classic that brings authentic flavors to your table.',
+        price: '95 dkk'
+    },
+    chicken: {
+        title: 'Grilled Chicken Roll',
+        image: 'images/product6.png',
+        allergens: 'allergens: 1, 2, 6',
+        calories: '490 kcal',
+        description: 'Succulent grilled chicken wrapped in fresh bread with crisp vegetables and our signature sauce. A perfect balance of protein and flavor.',
+        price: '75 dkk'
     }
 };
 
@@ -50,14 +66,11 @@ function closeModal() {
     document.getElementById('productModal').classList.remove('active');
 }
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('productModal').addEventListener('click', function(e) {
-        if (e.target === this) {
-            closeModal();
-        }
-    });
-});
+function filterProducts(category) {
+    const menuItems = document.querySelectorAll('.menu-item');
+    
+    // Hide all focus icons
+    document.querySelectorAll('.focus-icon').forEach(focusIcon => {
         if (focusIcon) {
             focusIcon.style.display = 'none';
         }
@@ -81,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const productId = item.getAttribute('onclick')?.match(/openModal\('(.+?)'\)/)?.[1];
             const product = products[productId];
             const isVegan = product && !product.allergens.includes('7') && // no dairy
-                           ['hummus', 'fattoush', 'falafel', 'french_fries', 'grilled_vegetables', 'falafel_menu', 'wara'].includes(productId);
+                           ['wara'].includes(productId);
             item.style.display = isVegan ? 'flex' : 'none';
         } else if (category === 'lactose-free') {
             // Show items without dairy (allergen 7)
@@ -98,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (category === 'spicy') {
             // Show spicy items
             const productId = item.getAttribute('onclick')?.match(/openModal\('(.+?)'\)/)?.[1];
-            const isSpicy = ['ezma', 'kebab_hot', 'beyti_kebab'].includes(productId);
+            const isSpicy = ['ezma'].includes(productId);
             item.style.display = isSpicy ? 'flex' : 'none';
         } else if (category === 'low-calorie') {
             // Show items under 300 calories
